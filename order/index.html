@@ -5,27 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
-    <script src="../js/main.js"></script>
     <title> ĐẶT HÀNG </title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../css/member_css.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link rel='stylesheet' href='./styles.css'>
-    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="./toastr.js"></script>
     <link rel="stylesheet" href="./toastr.css">
     <script src="../asset/js/audio.js"></script>
     <link rel="stylesheet" href="../css/toggle.css">
-    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/member_css.css">
+    <link rel='stylesheet' href='./styles.css'>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
 
     <script>
         $(document).ready(function() {
@@ -292,80 +290,6 @@
     </div>
     <script>
         async function order(index) {
-    switch(product){
-            case "Áo khoác" :
-                if(order > 0) {
-                    const Aokhoac = `https://api.thingspeak.com/update?api_key=YIS7Q9RZ3M5324C7&field1=${order}`;
-                    const data = await axios.get(Aokhoac);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Áo thun nam" :
-                if(order > 0) {
-                    const Aothunnam = `https://api.thingspeak.com/update?api_key=QYPBI2DG318MEOQO&field1=${order}`;
-                    const data = await axios.get(Aothunnam);
-                    window.location.reload();
-               }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Áo thun nữ" :
-                if(order > 0) {
-                    const Aothunnu = `https://api.thingspeak.com/update?api_key=P8O5QRFR51ZBQ5KS&field1=${order}`;
-                    const data = await axios.get(Aothunnu);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Áo thể thao" :
-                if(order > 0){
-                    const Aothethao = `https://api.thingspeak.com/update?api_key=6IEOE5FLQXX0PHL6&field1=${order}`;
-                    const data = await axios.get(Aothethao);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Áo Hoodies" :
-                if(order > 0){
-                    const AoHoodies = `https://api.thingspeak.com/update?api_key=OTJ09TP7GTP2LWWZ&field1=${order}`;
-                    const data = await axios.get(AoHoodies);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Âu phục nam" :
-                if(order > 0){
-                    const Auphucnam = `https://api.thingspeak.com/update?api_key=E75QSMPV6TZW9X47&field1=${order}`;
-                    const data = await axios.get(Auphucnam);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Âu phục nữ" :
-                if(order > 0){
-                    const Auphucnu = `https://api.thingspeak.com/update?api_key=91ZT3RLNZZ6QZFPA&field1=${order}`;
-                    const data = await axios.get(Auphucnu);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-            case "Áo kiểu nữ" :
-                if(order >0){
-                    const Aokieunu = `https://api.thingspeak.com/update?api_key=ZXO6PBDRWEL4LGGI&field1==${order}`;
-                    const data = await axios.get(Aokieunu);
-                    window.location.reload();
-                }else{
-                    alert("Số lượng không hợp lệ");
-                }
-                break;
-        }
 
             let quantity = Math.floor($('#quantity' + index).text());
             let order = Math.floor($('#order' + index).val());
@@ -401,6 +325,89 @@
                 setCookie('name' + index, product)
                 setCookie('price' + index, $('#price' + index).text())
                 setCookie('total' + index, total)
+
+                switch(product){
+                    case "Áo khoác" :
+                        if(order > 0) {
+                            const Aokhoac = `https://api.thingspeak.com/update?api_key=YIS7Q9RZ3M5324C7&field1=${order}`;
+                            const data = await axios.get(Aokhoac);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Áo thun nam" :
+                        if(order > 0) {
+                            const Aothunnam = `https://api.thingspeak.com/update?api_key=QYPBI2DG318MEOQO&field1=${order}`;
+                            const data = await axios.get(Aothunnam);
+                            console.log(data);
+                            window.location.reload();
+                    }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Áo thun nữ" :
+                        if(order > 0) {
+                            const Aothunnu = `https://api.thingspeak.com/update?api_key=P8O5QRFR51ZBQ5KS&field1=${order}`;
+                            const data = await axios.get(Aothunnu);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Áo thể thao" :
+                        if(order > 0){
+                            const Aothethao = `https://api.thingspeak.com/update?api_key=6IEOE5FLQXX0PHL6&field1=${order}`;
+                            const data = await axios.get(Aothethao);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Áo Hoodies" :
+                        if(order > 0){
+                            const AoHoodies = `https://api.thingspeak.com/update?api_key=OTJ09TP7GTP2LWWZ&field1=${order}`;
+                            const data = await axios.get(AoHoodies);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Âu phục nam" :
+                        if(order > 0){
+                            const Auphucnam = `https://api.thingspeak.com/update?api_key=E75QSMPV6TZW9X47&field1=${order}`;
+                            const data = await axios.get(Auphucnam);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Âu phục nữ" :
+                        if(order > 0){
+                            const Auphucnu = `https://api.thingspeak.com/update?api_key=91ZT3RLNZZ6QZFPA&field1=${order}`;
+                            const data = await axios.get(Auphucnu);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                    case "Áo kiểu nữ" :
+                        if(order >0){
+                            const Aokieunu = `https://api.thingspeak.com/update?api_key=ZXO6PBDRWEL4LGGI&field1==${order}`;
+                            const data = await axios.get(Aokieunu);
+                            console.log(data);
+                            window.location.reload();
+                        }else{
+                            alert("Số lượng không hợp lệ");
+                        }
+                        break;
+                }
             } else {
                 toastr.error("Số lượng " + product + " không đủ")
                 swal.fire({
